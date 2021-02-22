@@ -1,0 +1,16 @@
+#include<stdio.h>
+void swapByReference(int*,int*);/*prototype*/
+
+void main()/*main function*/
+{
+	int n1=5, n2=50;
+	/*actual arguments will be altered*/
+	swapByReference(&n1,&n2);
+	printf("n1: %d,n2: %d\n",n1,n2);
+}
+
+void swapByReference(int*x,int*y)
+{
+	int t;
+	t=*x;*x=*y;*y=t;
+}
